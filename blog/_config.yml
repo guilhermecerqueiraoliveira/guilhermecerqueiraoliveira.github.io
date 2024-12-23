@@ -37,9 +37,10 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-archives
-  - jekyll-assets
+#  - jekyll-assets
   - jekyll-multiple-languages-plugin
   - jekyll-scholar
+  - jekyll-include-cache
 
 paginate: 5 # Configuração para o jekyll-paginate
 
