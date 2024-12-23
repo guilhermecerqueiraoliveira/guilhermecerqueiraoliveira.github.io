@@ -1,6 +1,7 @@
 # Licença de Direitos Autorais - Copyright
 
-**Copyright (c) 2024 - Presente** **José Guilherme Cerqueira Oliveira** <aluno.jose.cerqueira@doctum.edu.br> Todos os direitos reservados.
+## Copyright (c) 2024 - Presente
+**José Guilherme Cerqueira Oliveira** <aluno.jose.cerqueira@doctum.edu.br> todos os direitos reservados.
 
 ---
 
