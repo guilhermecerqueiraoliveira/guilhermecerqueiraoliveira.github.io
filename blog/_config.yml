@@ -41,6 +41,7 @@ plugins:
   - jekyll-multiple-languages-plugin
   - jekyll-scholar
   - jekyll-include-cache
+  - jekyll-remote-include
 
 paginate: 5 # Configuração para o jekyll-paginate
 
