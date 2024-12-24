@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>José Guilherme Cerqueira Oliveira</title>
+    <!-- Ícones do Google Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+
+        ::selection {
+            background-color: black;
+            color: white;
+        }        
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin-top: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+
+        .project {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .project div {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            box-sizing: border-box;
+        }
+
+        .project img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .project div {
+                width: 100%;
+            }
+        }
+
+        /* Estilos dos ícones */
+        .icon {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .case {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #contact ul {
+            list-style: none;  /* Remove as bolinhas padrão */
+            padding: 0;        /* Remove o padding padrão do <ul> */
+            display: flex;     /* Exibe os itens <li> em linha */
+            gap: 20px;         /* Define o espaçamento entre os itens */
+            flex-wrap: wrap;   /* Permite que os itens quebrem para a linha seguinte, caso necessário */
+        }
+
+        #contact li {
+            display: flex;
+            align-items: center; /* Alinha os ícones e o texto verticalmente */
+            gap: 10px;           /* Espaçamento entre o ícone e o texto */
+        }
+
+        #contact a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: black;          /* Define a cor do texto do link */
+            font-weight: 500;      /* Opcional: deixa o texto mais destacado */
+        }
+
+        #contact .material-icons .icon {
+            font-size: 24px;       /* Tamanho dos ícones */
+            color: black;          /* Cor dos ícones */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <h1>José Guilherme Cerqueira Oliveira</h1>
+        <p>Desenvolvedor Web | Estudante de Análise de Desenvolvimento de Sistema</p>
+    </div>
+</header>
+
+<section id="about">
+    <div class="container">
+        <a href="about/"><h2>Sobre Mim</h2></a>
+        <p><span class="case">Olá</span>👋</br>Meu nome é José Guilherme e moro no interior de Minas Gerais. Estudando Análise de Desenvolvimento de Sistemas pela Doctum. Participante do Computer Science Harvard (CS50). Sou um entusiasta de todas as tecnologias.</p>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Meus Projetos</h2>
+        <div class="project">
+            <div>
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Este é um exemplo de projeto que desenvolvi utilizando HTML, CSS e JavaScript. O objetivo desse projeto foi...</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Este projeto foi feito com foco em usabilidade, utilizando as melhores práticas de design responsivo...</p>
+            </div>
+            <div>
+                <img src="https://via.placeholder.com/300x200" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Um projeto de desenvolvimento de aplicativo web, com integração de API para fornecer dados dinâmicos...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <a href="contact/"><h2>Contato</h2></a>
+        <p>Se você quiser conversar sobre oportunidades de colaboração ou se tiver alguma dúvida sobre meus projetos, fique à vontade para me contactar:</p>
+        <ul>
+            <li title="email acadêmico"><span class="material-icons icon">email</span><a href="mailto:aluno.jose.cerqueira@doctum.edu.br">Email Acadêmico</a></li>
+            <li title="GitHub"><span class="material-icons icon">github</span><a href="https://github.com/guilhermecerqueiraoliveira" target="_blank">GitHub</a></li>
+            <li title="linkedIn"><span class="material-icons icon">linkedin</span><a href="https://www.linkedin.com/in/guilhermecerqueiradeoliveira/" target="_blank">linkedIn</a></li>
+        </ul>
+    </div>
+</section>
+
+<footer>
+    <p>
+        <a href="https://raw.githubusercontent.com/guilhermecerqueiraoliveira/guilhermecerqueiraoliveira.github.io/refs/heads/master/license.md"><code>&lt;/Gui&gt;</code></a>
+        &copy; <span id="current-year"></span></p>
+</footer>
+<script>
+
+    // atualizar ano automaticamente no footer
+    
+    function updateYear() {
+            var currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+        }
+        
+        window.onload = updateYear;
+</script>
+</body>
+</html>
