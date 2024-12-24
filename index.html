@@ -165,10 +165,20 @@
 </section>
 
 <footer>
-    <p>&copy; 2024 <code>&lt;/Gui&gt;</code>
+    <p>&copy; <span id="current-year"></span> <code>&lt;/Gui&gt;</code>
         <a href="https://raw.githubusercontent.com/guilhermecerqueiraoliveira/guilhermecerqueiraoliveira.github.io/refs/heads/master/license.md">todos os direitos reservados</a>.
     </p>
 </footer>
-
+<script>
+    
+    // atualizar ano automaticamente no footer
+    
+    function updateYear() {
+            var currentYear = new Date().getFullYear();
+            document.getElementById('current-year').textContent = currentYear;
+        }
+        
+        window.onload = updateYear;
+</script>
 </body>
 </html>
