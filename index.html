@@ -117,10 +117,37 @@
             vertical-align: middle;
             margin-right: 10px;
         }
+
         .case {
             font-size: 20px;
             font-weight: bold;
         }
+
+        #contact ul {
+            list-style: none;  /* Remove as bolinhas padrão */
+            padding: 0;        /* Remove o padding padrão do <ul> */
+            display: flex;     /* Exibe os itens <li> em linha */
+            gap: 20px;         /* Define o espaçamento entre os itens */
+            flex-wrap: wrap;   /* Permite que os itens quebrem para a linha seguinte, caso necessário */
+        }
+
+        #contact li {
+            display: flex;
+            align-items: center; /* Alinha os ícones e o texto verticalmente */
+            gap: 10px;           /* Espaçamento entre o ícone e o texto */
+        }
+
+        #contact a {
+            text-decoration: none; /* Remove o sublinhado dos links */
+            color: black;          /* Define a cor do texto do link */
+            font-weight: 500;      /* Opcional: deixa o texto mais destacado */
+        }
+
+        #contact .material-icons .icon {
+            font-size: 24px;       /* Tamanho dos ícones */
+            color: black;          /* Cor dos ícones */
+        }
+
     </style>
 </head>
 <body>
