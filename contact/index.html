@@ -1,93 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact page for reaching out to the site owner.">
-    <title>Contact Us</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contato - José Guilherme Cerqueira Oliveira</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
-        body {
+        ::selection {
+            background-color: black;
+            color: white;
+        }
+        * {
+            margin: 0;
+            padding: 0;
             font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #f4f4f4;
+            color: #333;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
         }
         header {
             background: #333;
             color: #fff;
-            padding: 10px 20px;
+            padding: 20px 0;
             text-align: center;
         }
-        main {
-            padding: 20px;
-            max-width: 600px;
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #444;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-        label {
+        header h1 {
+            font-size: 2.5rem;
             margin-bottom: 10px;
         }
-        input, textarea {
+        header p {
+            font-size: 1rem;
+            margin-top: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            text-align: center;
+            color: #333;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input, textarea, button {
             width: 100%;
             padding: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 5px;
+            font-size: 1rem;
         }
         button {
-            padding: 10px 15px;
-            background-color: #007BFF;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px 20px;
             background: #333;
             color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #555;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Contact Us</h1>
-    </header>
-    <main>
-        <p>If you have any questions or just want to say hi, feel free to send us a message using the form below.</p>
+<header>
+    <div class="container">
+        <h1>Contato</h1>
+        <p>Entre em contato comigo!</p>
+    </div>
+</header>
+<section id="contact">
+    <div class="container">
+        <h2>Formulário de Contato</h2>
         <form action="https://formspree.io/f/xlddnwlz" method="POST">
-            <label for="email">
-                Your email:
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </label>
-            <label for="message">
-                Your message:
-                <textarea id="message" name="message" rows="5" placeholder="Write your message here" required></textarea>
-            </label>
-            <button type="submit">Send</button>
+            <label for="email">Seu Email:</label>
+            <input type="email" name="email" id="email" required>
+            <label for="message">Sua Mensagem:</label>
+            <textarea name="message" id="message" rows="5" required></textarea>
+            <button type="submit">Enviar</button>
         </form>
-    </main>
-    <footer>
-        <p>&copy; 2024 Your Website. All rights reserved.</p>
-    </footer>
+    </div>
+</section>
+<footer>
+    <p>
+        <a href="https://raw.githubusercontent.com/guilhermecerqueiraoliveira/guilhermecerqueiraoliveira.github.io/refs/heads/master/license.md"><code>&lt;/Gui&gt;</code></a>
+        &copy; <span id="current-year"></span>
+    </p>
+</footer>
+<script>
+    function updateYear() {
+        var currentYear = new Date().getFullYear();
+        document.getElementById('current-year').textContent = currentYear;
+    }
+    window.onload = updateYear;
+</script>
 </body>
 </html>
