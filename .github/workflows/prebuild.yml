@@ -13,10 +13,17 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '18'  # Atualize para a versão 18 ou superior
+        node-version: '18'
 
     - name: Install Firebase CLI
       run: npm install -g firebase-tools
+
+    - name: Authenticate Firebase CLI
+      env:
+        FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+      run: |
+        echo $FIREBASE_SERVICE_ACCOUNT > ${HOME}/firebase-service-account.json
+        firebase auth:import --project YOUR_PROJECT_ID --account ${HOME}/firebase-service-account.json
 
     - name: Initialize Firebase
       run: firebase init
