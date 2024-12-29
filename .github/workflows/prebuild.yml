@@ -21,7 +21,7 @@ jobs:
     - name: Create Firebase Service Account File
       env:
         FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-      run: echo "$FIREBASE_SERVICE_ACCOUNT" > $HOME/firebase-service-account.json
+      run: echo "$FIREBASE_SERVICE_ACCOUNT" | base64 --decode > $HOME/firebase-service-account.json
 
     - name: Authenticate Firebase CLI
       run: firebase auth:import --project YOUR_PROJECT_ID --account $HOME/firebase-service-account.json
