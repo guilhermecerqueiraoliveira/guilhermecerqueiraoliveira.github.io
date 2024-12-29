@@ -1,3 +1,9 @@
+// Copyright (c) 2024 José Guilherme Cerqueira de Oliveira <aluno.jose.cerqueira@doctum.edu.br>
+// This source code is licensed under the MIT license found in the license file.
+
+// Padrão de caminho para ignorar os arquivos e diretórios.
+// Veja https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json.
+
 {
     "name": "Portifólio Gui",
     "short_name": "GCO",
