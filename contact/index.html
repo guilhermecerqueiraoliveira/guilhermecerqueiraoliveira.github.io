@@ -104,9 +104,31 @@
         footer a:hover {
             text-decoration: underline;
         }
+         #status {
+            position: fixed;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            text-align: center;
+            display: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        #status.online {
+            background-color: #4caf50; /* Verde para online */
+        }
+
+        #status.offline {
+            background-color: #f44336; /* Vermelho para offline */
+        }
     </style>
 </head>
 <body>
+    <div id="status" class="offline">Você está offline!</div>
 <header>
     <div class="container">
         <h1>Contato</h1>
