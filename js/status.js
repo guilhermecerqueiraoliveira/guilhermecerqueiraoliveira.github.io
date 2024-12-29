@@ -1,7 +1,7 @@
     function updateStatus() {
         const statusDiv = document.getElementById('status');
         if (navigator.onLine) {
-            print("Usuário online!");
+            console.log("você está online!");
         } else {
             statusDiv.textContent = 'Você está offline!';
             statusDiv.className = 'offline';
