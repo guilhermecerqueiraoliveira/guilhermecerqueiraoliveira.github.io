@@ -2,10 +2,18 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:title" content="Contato - José Guilherme Cerqueira de Oliveira">
+    <meta property="og:description" content="Entre em contato comigo!">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1466096115517-bceecbfb6fde?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="guilhermecerqueiraoliveira.github.io">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Contato - José Guilherme Cerqueira de Oliveira">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="manifest" href="../manifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contato - José Guilherme Cerqueira Oliveira</title>
@@ -110,9 +118,9 @@
         <h2>Formulário de Contato</h2>
         <form action="https://formspree.io/f/xlddnwlz" method="POST">
             <label for="email">Seu Email:</label>
-            <input type="email" name="email" id="email" required>
+            <input type="email" name="email" id="email" placeholder="Digite seu melhor email" required>
             <label for="message">Sua Mensagem:</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
+            <textarea name="message" id="message" rows="5" placeholder="Digite sua mensagem" required></textarea>
             <button type="submit">Enviar</button>
         </form>
     </div>
@@ -130,5 +138,7 @@
     }
     window.onload = updateYear;
 </script>
+    <script src="/js/disable-rmb.js"></script>
+    <script src="/js/status.js"></script>
 </body>
 </html>
