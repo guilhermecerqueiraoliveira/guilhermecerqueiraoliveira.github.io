@@ -1,3 +1,9 @@
+# Copyright (c) 2024 - Presente José Guilherme Cerqueira de Oliveira <aluno.jose.cerqueira@doctum.edu.br>
+# This source code is licensed under the MIT license found in the license file.
+
+# Padrão de caminho para ignorar os arquivos e diretórios.
+# Veja https://git-scm.com/docs/gitignore para mais detalhes.
+
 # Firebase build and deployment files
 /firebase-debug.log
 /firebase-debug.*.log
@@ -24,7 +30,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Environment files (local configs)
+# Environment files
 /.env.*
 
 # Sass
@@ -43,5 +49,21 @@ _site/
 .bundle/
 vendor/
 
-# Details at https://github.com/github/pages-gem/issues/768
+# Detalhes em https://github.com/github/pages-gem/issues/768
 Gemfile.lock
+
+# IDEs
+.vscode/
+
+# Coverage directory
+coverage/
+
+# Build directory
+dist/
+
+# Temporary files
+*.swp
+*.swo
+
+# Node.js dependencies
+node_modules/
