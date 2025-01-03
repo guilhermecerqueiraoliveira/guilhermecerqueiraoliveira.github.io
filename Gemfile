@@ -86,6 +86,11 @@ gem 'jekyll-asset-pipeline'  # Empacota, minifica e organiza arquivos de CSS e J
 gem 'jekyll-tagging'  # Permite adicionar e organizar tags para seus posts
 # Documentação: https://github.com/robwierzbowski/jekyll-tagging
 
+# jekyll-spellcheck: Realiza verificação ortográfica nos textos do Jekyll, com suporte a vários idiomas, incluindo o português.
+gem 'jekyll-spellcheck'
+# Documentação: https://github.com/jekyll/jekyll-spellcheck
+
+
 # Jekyll Spelling - Verifica erros de digitação no conteúdo do site
 gem 'jekyll-spelling'  # Verifica erros ortográficos durante o build do site
 # Documentação: https://github.com/digitalsandwich/jekyll-spelling
