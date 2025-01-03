@@ -1,0 +1,34 @@
+# robots.txt para o site guidev.site
+
+# Instruções gerais para todos os bots
+User-agent: *
+# Bloqueando o acesso ao diretório de arquivos temporários ou privados (caso haja algum)
+Disallow: /assets/
+Disallow: /node_modules/
+Disallow: /private/
+Disallow: /tmp/
+Disallow: /logs/
+
+# Não indexar as páginas de administração do Firebase (se aplicável)
+Disallow: /admin/
+
+# Permite o acesso à raiz do site (páginas públicas)
+Allow: / 
+
+# Prevenção de indexação de páginas específicas, como resultados de pesquisa ou páginas de login
+Disallow: /search
+Disallow: /login
+
+# Permite indexação do blog, desde que tenha sido configurado corretamente no Jekyll
+Allow: /blog/
+
+# Bloqueando acesso a qualquer arquivo que tenha extensão Sass ou SCSS, já que esses não são relevantes para indexação
+Disallow: /assets/*.scss
+Disallow: /assets/*.sass
+
+# Recomendação para bots não indexarem arquivos temporários ou gerados
+Disallow: /_site/
+Disallow: /_drafts/
+
+# Sitemaps (se você estiver usando o Jekyll Sitemap plugin, isso é importante)
+Sitemap: https://guidev.site/sitemap.xml
