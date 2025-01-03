@@ -1,11 +1,11 @@
 {
-    "name": "Portifólio Gui",
-    "short_name": "GCO",
-    "description": "Meu portifólio e meu blog.",
-    "start_url": "/index.html",
+    "name": "GuiDev",
+    "short_name": "GuiDev",
+    "description": "Meu blog.",
+    "start_url": "/blog",
     "display": "standalone",  
-    "background_color": "#ffffff",
-    "theme_color": "#000000",
+    "background_color": "#c0c0c0",
+    "theme_color": "#404040",
     "icons": [
       {
         "src": "/apple-touch-icon.png",

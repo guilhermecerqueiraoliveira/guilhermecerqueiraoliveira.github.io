@@ -67,3 +67,11 @@ dist/
 
 # Node.js dependencies
 node_modules/
+
+# Keys
+*.key
+*.pem
+
+# System files
+.DS_Store
+Thumbs.db
