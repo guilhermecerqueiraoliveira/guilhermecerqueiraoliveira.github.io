@@ -90,11 +90,6 @@ gem 'jekyll-tagging'  # Permite adicionar e organizar tags para seus posts
 gem 'jekyll-spellcheck'
 # Documentação: https://github.com/jekyll/jekyll-spellcheck
 
-
-# Jekyll Spelling - Verifica erros de digitação no conteúdo do site
-gem 'jekyll-spelling'  # Verifica erros ortográficos durante o build do site
-# Documentação: https://github.com/digitalsandwich/jekyll-spelling
-
 # Jekyll Post Links - Gera links para posts relacionados automaticamente
 gem 'jekyll-post-links'  # Cria links para posts relacionados a partir de referências no conteúdo
 # Documentação: https://github.com/matthieudev/jekyll-post-links
