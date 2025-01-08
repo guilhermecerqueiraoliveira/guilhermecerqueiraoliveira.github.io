@@ -1,3 +1,4 @@
+// Autor: José Guilherme Cerqueira de Oliveira    
     function updateStatus() {
         const statusDiv = document.getElementById('status');
         if (navigator.onLine) {

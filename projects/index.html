@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <!-- <link rel="manifest" href="/site.webmanifest"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="google-site-verification" content="ugC2zx7Ne9iHe-KahH2l2xd7Zk_srVbCOPp4ff7CsDw" />
+    <link rel="stylesheet" href="../css/main.css">
+    <!-- ícones do Google Material -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Projetos - GuiDev</title>
+    <style>
+        body {
+            padding: 20px;
+        }
+        .project {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .project p {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Meus Projetos</h1>
+    <div id="projects"></div>
+
+    <footer>
+        <p>
+            <a href="https://raw.githubusercontent.com/guilhermecerqueiraoliveira/guilhermecerqueiraoliveira.github.io/refs/heads/master/license.md"><code>&lt;/Gui&gt;</code></a>
+            &copy; <span id="current-year"></span>
+        </p>
+    </footer>
+    <script src="../js/load-data.js"></script>
+    <script>
+        // API GitHub https://api.github.com/
+        const GITHUB_USERNAME = "guilhermecerqueiraoliveira";
+        const REPO_API_URL = `https://api.github.com/users/${GITHUB_USERNAME}/repos`;
+
+        async function fetchProjects() {
+            try {
+                const response = await fetch(REPO_API_URL);
+                if (!response.ok) {
+                    throw new Error(`GitHub API retornou o status: ${response.status}`);
+                }
+
+                const repos = await response.json();
+                const projectsContainer = document.getElementById('projects');
+
+                for (const repo of repos) {
+                    const projectElement = document.createElement('div');
+                    projectElement.classList.add('project');
+
+                    // Fetch tags for each repository
+                    const tagsResponse = await fetch(repo.tags_url);
+                    const tags = await tagsResponse.json();
+                    const latestTag = tags.length > 0 ? tags[0].name : repo.default_branch || "main";
+
+                    projectElement.innerHTML = `
+                        <h2><a href="${repo.html_url}" target="_blank">${repo.name}</a></h2>
+                        <p>${repo.description || "Projeto ainda sem descrição."}</p>
+                        <p><strong>Criado em:</strong> ${new Date(repo.created_at).toLocaleDateString()}</p>
+                        <p><strong>Versão:</strong> ${latestTag}</p>
+                    `;
+
+                    projectsContainer.appendChild(projectElement);
+                }
+            } catch (error) {
+                console.error("Erro ao buscar projetos:", error);
+                document.getElementById('projects').innerText = "Falha ao carregar os projetos. Por favor, tente novamente mais tarde.";
+            }
+        }
+
+        fetchProjects();
+    </script>
+</body>
+</html>
