@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>José Guilherme Cerqueira Oliveira</title>
     <style>
-        
+
         header {
             background: #333;
             color: #fff;
@@ -151,7 +151,7 @@
 
 <section id="projects">
     <div class="container">
-        <h2>Meus Projetos</h2>
+        <a href="projects/"><h2>Projetos</h2></a>
         <div class="project">
             <div>
                 <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
@@ -187,18 +187,9 @@
 <footer>
     <p>
         <a href="https://raw.githubusercontent.com/guilhermecerqueiraoliveira/guilhermecerqueiraoliveira.github.io/refs/heads/master/license.md"><code>&lt;/Gui&gt;</code></a>
-        &copy; <span id="current-year"></span></p>
+        &copy; <span id="current-year"></span>
+    </p>
 </footer>
-<script>
-
-    // atualizar ano automaticamente no footer
-    
-    function updateYear() {
-            var currentYear = new Date().getFullYear();
-            document.getElementById('current-year').textContent = currentYear;
-        }
-        
-        window.onload = updateYear;
-</script>
+<script src="js/load-data.js"></script>
 </body>
 </html>
