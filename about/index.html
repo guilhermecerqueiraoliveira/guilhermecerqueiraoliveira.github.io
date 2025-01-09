@@ -2,17 +2,50 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.guidev.site/assets/favicon/apple-touch-icon.png" as="image">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.guidev.site/assets/favicon/favicon-32x32.png" as="image">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.guidev.site/assets/favicon/favicon-16x16.png" as="image">
+    <link rel="icon" type="image/x-icon" href="https://www.guidev.site/assets/favicon/favicon.ico" as="image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>José Guilherme Cerqueira Oliveira</title>
+    <title>&lt;/Sobre&gt;</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        .perfil {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .perfil img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .perfil h1 {
+            margin: 0;
+        }
+        .bio {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 <body>
     <div class="about-content">
-        
+        <div class="perfil">
+            <img id="avatar" src="" alt="Avatar do GitHub">
+            <div>
+                <h1 id="nome">Carregando...</h1>
+                <p id="usuario"></p>
+            </div>
+        </div>
+        <p class="bio" id="bio">Carregando bio...</p>
     </div>
     <footer>
         <p>
@@ -20,5 +53,26 @@
             &copy; <span id="year"></span>
         </p>
     </footer>
+    <script>
+        const USUARIO_GITHUB = "guilhermecerqueiraoliveira";
+
+        async function searchProfileGitHub() {
+            try {
+                const resposta = await fetch(`https://api.github.com/users/${USUARIO_GITHUB}`);
+                if (!resposta.ok) throw new Error("Erro ao buscar dados do perfil");
+
+                const dados = await resposta.json();
+                document.getElementById('avatar').src = dados.avatar_url;
+                document.getElementById('nome').textContent = dados.name || "Nome não disponível";
+                document.getElementById('usuario').textContent = `@${dados.login}`;
+                document.getElementById('bio').textContent = dados.bio || "Bio não disponível";
+            } catch (erro) {
+                console.error(erro);
+                document.getElementById('bio').textContent = "Erro ao carregar dados da bio, tente novamente mais tarde.";
+            }
+        }
+
+        searchProfileGitHub();
+    </script>
 </body>
 </html>

@@ -1,17 +1,112 @@
+/* Importando tema de cores */
+
 /*
  * Copyright (c) 2024 - Presente <contact@guidev.site>
  * Este código-fonte está licenciado sob a licença MIT encontrada no arquivo de licença.
  * https://developer.mozilla.org/pt-BR/docs/Web/CSS
  */
  
- /* import tema de cores */
- @import url('https://raw.githubusercontent.com/eucapy/eucapy-theme/refs/heads/main/src/eucapy.css');
+/* 
+ * Copyright (c) 2024 - Presente <contact@guidev.site>
+ * This source code is licensed under the MIT license found in the license file.
+
+more details:
+ *   1. https://www.w3.org/TR/css-variables
+ *   2. https://www.w3.org/TR/selectors/#root-pseudo
+ *   3. https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables
+
+
+Palette: EucaPy
+Description: A color palette comfortable to your eyes.
+Author: José Guilherme <contact@guidev.site>
+Inspired by minimalistic and eye-friendly design.
+
+All colors are grouped by their respective hues and provide a comfortable
+balance for design elements in both light and dark themes.
+Each group includes shades with descriptive names for easy use.
+
+@version 1.0.0
+@since 2025-01-03
+*/
+
+:root {
+    /* === Blue Shades === */
+    --true-blue: #0a66c2; /* A bold and versatile blue for primary highlights. */
+    --deep-sky-blue: #0a5bb2; /* A slightly deeper blue for calmer accents. */
+    --royal-blue: #0a4fa2; /* A royal shade for elegant designs. */
+    --dark-azure: #0a4492; /* A darker azure, ideal for subdued elements. */
+    --midnight-blue: #0a3982; /* A midnight blue for deep contrasts. */
+  
+    /* === Red Shades === */
+    --crimson-red: #c20a0a; /* Intense red for strong warnings or errors. */
+    --deep-red: #b20a0a; /* Deep red for impactful highlights. */
+    --dark-red: #a20a0a; /* Subtle and muted for less aggressive accents. */
+    --burgundy: #920a0a; /* Rich and elegant tone for premium designs. */
+    --maroon: #820a0a; /* Dark, earthy red for grounding visuals. */
+  
+    /* === Green Shades === */
+    --emerald-green: #0ac20a; /* Vibrant green for success states. */
+    --forest-green: #0ab20a; /* Deep green for nature-inspired designs. */
+    --dark-green: #0aa20a; /* Subdued green for neutral accents. */
+    --pine-green: #0a920a; /* Calming green for subtle backgrounds. */
+    --olive-green: #0a820a; /* Earthy green for muted themes. */
+  
+    /* === Yellow Shades === */
+    --golden-yellow: #c2c20a; /* Bright and vibrant yellow for primary warnings. */
+    --mustard-yellow: #b2b20a; /* A rich, muted yellow for softer highlights. */
+    --dark-yellow: #a2a20a; /* Subtle yellow for minimalistic designs. */
+    --olive-yellow: #92920a; /* Earthy and natural for balanced visuals. */
+    --earth-yellow: #82820a; /* Soft yellow for neutral elements. */
+  
+    /* === Purple Shades === */
+    --royal-purple: #6a0ac2; /* Majestic purple for standout elements. */
+    --deep-purple: #5a0ab2; /* Rich purple for premium accents. */
+    --dark-purple: #4a0aa2; /* Muted purple for subtle backgrounds. */
+    --midnight-purple: #3a0a92; /* Deep and dark for elegant contrasts. */
+    --plum: #2a0a82; /* Soft purple with warm undertones. */
+  
+    /* === Orange Shades === */
+    --burnt-orange: #c26a0a; /* Vibrant orange for highlights. */
+    --deep-orange: #b25a0a; /* Rich orange for dynamic visuals. */
+    --dark-orange: #a24a0a; /* Muted orange for subdued designs. */
+    --rust: #924a0a; /* Earthy orange for natural tones. */
+    --copper: #824a0a; /* Metallic orange for premium accents. */
+  
+    /* === Pink Shades === */
+    --fuchsia: #c20a6a; /* Bright and bold for dynamic visuals. */
+    --deep-pink: #b20a5a; /* Rich pink for romantic highlights. */
+    --dark-pink: #a20a4a; /* Subtle pink for delicate accents. */
+    --rosewood: #920a3a; /* Warm pink with earthy undertones. */
+    --burgundy-pink: #820a2a; /* Elegant and muted for sophisticated themes. */
+  
+    /* === Brown Shades === */
+    --saddle-brown: #8b4513; /* Rich brown for natural accents. */
+    --sienna: #a0522d; /* Warm brown for rustic designs. */
+    --chocolate: #d2691e; /* Sweet and rich for inviting visuals. */
+    --peru: #cd853f; /* Neutral brown for soft backgrounds. */
+    --burlywood: #deb887; /* Light and muted brown for elegant themes. */
+  
+    /* === White Shades === */
+    --pure-white: #ffffff; /* Bright white for clean designs. */
+    --matte-white: #f0f0f0; /* Soft white for subtle contrasts. */
+    --gray-white: #e0e0e0; /* Neutral white with a grayish tint. */
+    --soft-white: #d0d0d0; /* Gentle white for minimalistic themes. */
+    --snow-white: #c0c0c0; /* Cool white for frosty aesthetics. */
+  
+    /* === Black Shades === */
+    --pure-black: #000000; /* Absolute black for strong contrasts. */
+    --matte-black: #101010; /* Soft black for less harsh elements. */
+    --gray-black: #202020; /* Neutral black with a grayish tone. */
+    --soft-black: #303030; /* Muted black for elegant designs. */
+    --charcoal-black: #404040; /* Dark gray-black for subtle contrasts. */
+  }
+  
 
 /* import icone e fontes */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-/* responsividade */
+/* responsividade https://developer.mozilla.org/pt-BR/docs/Learn_web_development/Core/CSS_layout/Responsive_Design */
 /* estilos para tablets (largura máxima de 768px) */ @media (max-width: 768px) { body { font-size: 14px; } .container { max-width: 100%; padding: 0 15px; } .project { flex-direction: column; align-items: center; } } /* estilos para celulares (largura máxima de 480px) */ @media (max-width: 480px) { body { font-size: 12px; } .container { padding: 0 10px; } h2 { font-size: 1.5rem; } .project { flex-direction: column; align-items: center; } } /* estilos para iPhones (largura máxima de 375px) */ @media (max-width: 375px) { body { font-size: 11px; } .container { padding: 0 8px; } h2 { font-size: 1.4rem; } .project { flex-direction: column; align-items: center; } } /* estilos para monitores ultra wide (largura mínima de 1440px) */ @media (min-width: 1440px) { body { font-size: 18px; } .container { max-width: 1600px; padding: 0 30px; } h2 { font-size: 2.5rem; } .project { flex-direction: row; justify-content: space-between; }
 }
 

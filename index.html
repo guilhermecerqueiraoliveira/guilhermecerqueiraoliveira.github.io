@@ -2,22 +2,30 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <meta property="og:title" content="&lt;/GuiDev&gt; - José Guilherme Cerqueira de Oliveira">
+    <meta property="og:description" content="Meu site pessoal, onde compartilho meus projetos e experiências.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    <meta property="og:url" content="guidev.site">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="&lt;/GuiDev&gt;">
+    <meta property="og:locale" content="pt_BR">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.guidev.site/assets/favicon/apple-touch-icon.png" as="image">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.guidev.site/assets/favicon/favicon-32x32.png" as="image">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.guidev.site/assets/favicon/favicon-16x16.png" as="image">
+    <link rel="icon" type="image/x-icon" href="https://www.guidev.site/assets/favicon/favicon.ico" as="image">
+    <link rel="manifest" href="/webmanifest.json">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="google-site-verification" content="ugC2zx7Ne9iHe-KahH2l2xd7Zk_srVbCOPp4ff7CsDw" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://www.guidev.site/css/main.css">
     <!-- Ícones do Google Material -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>&lt;/GuiDev&gt;</title>
     <style>
 
         header {
-            background: #333;
-            color: #fff;
+            background-image: url(https://images.unsplash.com/photo-1607798748738-b15c40d33d57?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+            color: var(--matte-white);
             padding: 20px 0;
             text-align: center;
         }
@@ -107,28 +115,28 @@
         }
 
         #contact ul {
-            list-style: none;  /* Remove as bolinhas padrão */
-            padding: 0;        /* Remove o padding padrão do <ul> */
-            display: flex;     /* Exibe os itens <li> em linha */
-            gap: 20px;         /* Define o espaçamento entre os itens */
-            flex-wrap: wrap;   /* Permite que os itens quebrem para a linha seguinte, caso necessário */
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         #contact li {
             display: flex;
-            align-items: center; /* Alinha os ícones e o texto verticalmente */
-            gap: 10px;           /* Espaçamento entre o ícone e o texto */
+            align-items: center;
+            gap: 10px;
         }
 
         #contact a {
-            text-decoration: none; /* Remove o sublinhado dos links */
-            color: black;          /* Define a cor do texto do link */
-            font-weight: 500;      /* Opcional: deixa o texto mais destacado */
+            text-decoration: none;
+            color: black;
+            font-weight: 500;
         }
 
         #contact .material-icons .icon {
-            font-size: 24px;       /* Tamanho dos ícones */
-            color: black;          /* Cor dos ícones */
+            font-size: 24px;
+            color: black;
         }
 
     </style>
@@ -145,13 +153,13 @@
 <section id="about">
     <div class="container">
         <a href="about/"><h2>Sobre Mim</h2></a>
-        <p><span class="case">Olá</span>👋</br>Meu nome é <strong>José Guilherme</strong> e moro no interior de Minas Gerais. Estudando <a href="https://vest.doctum.edu.br/cursos/analise-de-desenvolvimento-de-sistemas/">Análise de Desenvolvimento de Sistemas</a> pela Doctum. Participante do Computer Science Harvard <a href="https://cs50.harvard.edu/">(CS50)</a>. Sou um entusiasta de todas as tecnologias.</p>
+        <p><span class="case">Olá</span>👋</br>Meu nome é <strong>José Guilherme</strong> e moro no interior de Minas Gerais. Estudando <a href="https://vest.doctum.edu.br/cursos/analise-de-desenvolvimento-de-sistemas/">Análise de Desenvolvimento de Sistemas</a> pela Doctum. Participante do Computer Science Harvard (<a href="https://cs50.harvard.edu/">CS50</a>). Sou um entusiasta de todas as tecnologias.</p>
     </div>
 </section>
 
 <section id="projects">
     <div class="container">
-        <a href="projects/"><h2>Projetos</h2></a>
+        <h2><a href="projects/">Projetos</a></h2>
         <div class="project">
             <div>
                 <img src="https://via.placeholder.com/300x200" alt="Projeto 1">
@@ -174,7 +182,7 @@
 
 <section id="contact">
     <div class="container">
-        <a href="contact/"><h2>Contato</h2></a>
+        <h2><a href="contact/">Contato</a></h2>
         <p>Se você quiser conversar sobre oportunidades de colaboração ou se tiver alguma dúvida sobre meus projetos, fique à vontade para me contactar:</p>
         <ul>
             <li title="email acadêmico"><span class="material-icons icon">email</span><a href="mailto:aluno.jose.cerqueira@doctum.edu.br">Email Acadêmico</a></li>
@@ -190,6 +198,7 @@
         &copy; <span id="year"></span>
     </p>
 </footer>
-<script src="js/year.js"></script>
+<script src="js/year.js" defer></script>
+<script src="js/disable-rmb.js" defer></script>
 </body>
 </html>
