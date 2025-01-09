@@ -3,13 +3,13 @@
  * Este código-fonte está licenciado sob a licença MIT encontrada no arquivo de licença.
  * https://developer.mozilla.org/pt-BR/docs/Web/CSS
  */
+ 
+ /* import tema de cores */
+ @import url('https://raw.githubusercontent.com/eucapy/eucapy-theme/refs/heads/main/src/eucapy.css');
 
 /* import icone e fontes */
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
-/* import tema de cores */
-@import url('https://raw.githubusercontent.com/eucapy/eucapy-theme/refs/heads/main/src/eucapy.css');
 
 /* responsividade */
 /* estilos para tablets (largura máxima de 768px) */ @media (max-width: 768px) { body { font-size: 14px; } .container { max-width: 100%; padding: 0 15px; } .project { flex-direction: column; align-items: center; } } /* estilos para celulares (largura máxima de 480px) */ @media (max-width: 480px) { body { font-size: 12px; } .container { padding: 0 10px; } h2 { font-size: 1.5rem; } .project { flex-direction: column; align-items: center; } } /* estilos para iPhones (largura máxima de 375px) */ @media (max-width: 375px) { body { font-size: 11px; } .container { padding: 0 8px; } h2 { font-size: 1.4rem; } .project { flex-direction: column; align-items: center; } } /* estilos para monitores ultra wide (largura mínima de 1440px) */ @media (min-width: 1440px) { body { font-size: 18px; } .container { max-width: 1600px; padding: 0 30px; } h2 { font-size: 2.5rem; } .project { flex-direction: row; justify-content: space-between; }
