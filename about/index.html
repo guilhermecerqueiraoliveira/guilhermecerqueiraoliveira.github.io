@@ -2,38 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Sobre mim, Guilherme Cerqueira Oliveira, desenvolvedor web full-stack.">
+    <meta name="keywords" content="sobre, mim, guilherme, cerqueira, oliveira, desenvolvedor, web, full-stack">
+    <meta name="author" content="Guilherme Cerqueira Oliveira">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="&lt;/Sobre&gt;">
     <link rel="apple-touch-icon" sizes="180x180" href="https://www.guidev.site/assets/favicon/apple-touch-icon.png" as="image">
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.guidev.site/assets/favicon/favicon-32x32.png" as="image">
     <link rel="icon" type="image/png" sizes="16x16" href="https://www.guidev.site/assets/favicon/favicon-16x16.png" as="image">
     <link rel="icon" type="image/x-icon" href="https://www.guidev.site/assets/favicon/favicon.ico" as="image">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>&lt;/Sobre&gt;</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f9;
-            color: #333;
+            background-image: url(https://images.unsplash.com/photo-1623479322729-28b25c16b011?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
         }
         .perfil {
             display: flex;
             align-items: center;
             margin-bottom: 20px;
         }
-        .perfil img {
+        img.avatar {
             border-radius: 50%;
             width: 100px;
             height: 100px;
             margin-right: 20px;
         }
-        .perfil h1 {
-            margin: 0;
-        }
         .bio {
-            margin: 20px 0;
+            margin: 5% 0;
         }
+        .about-content {
+            max-width: 90vw;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }   
     </style>
 </head>
 <body>
@@ -41,8 +48,8 @@
         <div class="perfil">
             <img id="avatar" src="" alt="Avatar do GitHub">
             <div>
-                <h1 id="nome">Carregando...</h1>
-                <p id="usuario"></p>
+                <h1 id="nome">Carregando nome...</h1>
+                <p id="usuario">Carregando usuário...</p>
             </div>
         </div>
         <p class="bio" id="bio">Carregando bio...</p>

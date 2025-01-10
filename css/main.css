@@ -164,3 +164,25 @@ pre[class*="language-"] {
     tab-size: 4;
     hyphens: none;
 }
+
+footer {
+    text-align: center;
+}
+
+footer a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a {
+    text-decoration: none;
+}
+
+footer a, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a:hover {
+text-decoration: underline;
+}
+
+p a{
+    color: var(--true-blue); /* Substitua pela cor desejada */
+}
+
+/* estilizando links */
+a {
+    color: var(--true-blue);
+    text-decoration: none;
+}
