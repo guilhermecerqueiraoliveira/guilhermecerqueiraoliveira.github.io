@@ -1,39 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="180x180" href="https://www.guidev.site/assets/favicon/apple-touch-icon.png" as="image">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://www.guidev.site/assets/favicon/favicon-32x32.png" as="image">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://www.guidev.site/assets/favicon/favicon-16x16.png" as="image">
-    <link rel="icon" type="image/x-icon" href="https://www.guidev.site/assets/favicon/favicon.ico" as="image">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Página não encontrada - Erro 404">
-    <meta name="robots" content="noindex, nofollow">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="author" content="Lucas Bittencourt">
-    <meta name="generator" content="VS Code">
-    <meta name="keywords" content="404, página não encontrada, erro 404">
-    <meta name="theme-color" content="#0000">
-    <link rel="stylesheet" href="css/main.cssx">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://www.guidev.site/assets/favicon/apple-touch-icon.png"
+      as="image"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.guidev.site/assets/favicon/favicon-32x32.png"
+      as="image"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.guidev.site/assets/favicon/favicon-16x16.png"
+      as="image"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.guidev.site/assets/favicon/favicon.ico"
+      as="image"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página não encontrada - Erro 404" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Lucas Bittencourt" />
+    <meta name="generator" content="VS Code" />
+    <meta name="keywords" content="404, página não encontrada, erro 404" />
+    <meta name="theme-color" content="#0000" />
+    <link rel="stylesheet" href="css/main.css" />
     <title>&lt;/404&gt; - Página Não Encontrada</title>
     <style>
-        .error-container {
-            border-left: 5px solid var(--crimson-red);
-            padding: 20px;
-        }
+      .error-container {
+        border-left: 5px solid var(--crimson-red);
+        padding: 20px;
+      }
 
-        .error-code {
-            font-size: 72px;
-            font-weight: bold;
-        }
+      .error-code {
+        font-size: 8vw;
+      }
+      .error-msg {
+        font-size: 4vw;
+      }
+      .error-button {
+        border: 2px solid var(--crimson-red);
+        padding: 10px 20px;
+        background-color: var(--matte-white);
+        color: var(--dark-red);
+        font-size: 3.5vw;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .error-button:hover {
+        background-color: var(--dark-red);
+        color: var(--matte-white);
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="error-container">
-        <div class="error-code">404</div>
-        <p>Página não encontrada. A página que você está procurando pode ter sido removida, alterada ou está
-            temporariamente indisponível.</p>
+      <h1 class="error-code">404</h1>
+      <p class="error-msg">
+        Página não encontrada. A página que você está procurando pode ter sido
+        removida, alterada ou está temporariamente indisponível.
+      </p>
     </div>
-</body>
+    <a href="/" class="error-button">Página Inicial</a>
+  </body>
+</html>
